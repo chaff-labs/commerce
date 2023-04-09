@@ -40,6 +40,12 @@ module.exports = withCommerceConfig({
   experimental: {
     esmExternals: 'loose',
   },
+  output: 'standalone',
+  images: {
+    domains: [
+      'store.chaff.labs'
+    ]
+  },
 })
 
 // Don't delete this console log, useful to see the commerce config in Vercel deployments
