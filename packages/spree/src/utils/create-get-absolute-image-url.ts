@@ -20,6 +20,13 @@ const createGetAbsoluteImageUrl =
       return null
     }
 
+    if (url.startsWith('http')) {
+      host = ''
+    }
+
+    console.log('host: ', host)
+    console.log('url: ', url)
+
     return `${host}${url}`
   }
 
