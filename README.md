@@ -1,199 +1,158 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fcommerce&project-name=commerce&repo-name=commerce&demo-title=Next.js%20Commerce&demo-description=An%20all-in-one%20starter%20kit%20for%20high-performance%20e-commerce%20sites.&demo-url=https%3A%2F%2Fdemo.vercel.store&demo-image=https%3A%2F%2Fbigcommerce-demo-asset-ksvtgfvnd.vercel.app%2Fbigcommerce.png&integration-ids=oac_MuWZiE4jtmQ2ejZQaQ7ncuDT,oac_9HSKtXld74NG0srzdxSiBGty&skippable-integrations=1&root-directory=site&build-command=cd%20..%20%26%26%20yarn%20build)
+<p align="center">
+  <a href="https://www.medusajs.com">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/59018053/229103275-b5e482bb-4601-46e6-8142-244f531cebdb.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
+    <img alt="Medusa logo" src="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
+    </picture>
+  </a>
+</p>
 
-# Next.js Commerce
+<h1 align="center">
+  Medusa Next.js Starter
+</h1>
 
-The all-in-one starter kit for high-performance e-commerce sites. With a few clicks, Next.js developers can clone, deploy and fully customize their own store.
-Start right now at [nextjs.org/commerce](https://nextjs.org/commerce)
+<p align="center">
+Medusa is an open-source headless commerce engine that enables developers to create amazing digital commerce experiences.
+</p>
 
-Demo live at: [demo.vercel.store](https://demo.vercel.store/)
+<p align="center">
+  <a href="https://github.com/medusajs/medusa/blob/master/CONTRIBUTING.md">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!" />
+  </a>
+  <a href="https://discord.gg/xpCwq3Kfn8">
+    <img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Discord Chat" />
+  </a>
+  <a href="https://twitter.com/intent/follow?screen_name=medusajs">
+    <img src="https://img.shields.io/twitter/follow/medusajs.svg?label=Follow%20@medusajs" alt="Follow @medusajs" />
+  </a>
+</p>
 
-- Shopify Demo: https://shopify.vercel.store/
-- Swell Demo: https://swell.vercel.store/
-- BigCommerce Demo: https://bigcommerce.vercel.store/
-- Vendure Demo: https://vendure.vercel.store
-- Saleor Demo: https://saleor.vercel.store/
-- Ordercloud Demo: https://ordercloud.vercel.store/
-- Spree Demo: https://spree.vercel.store/
-- Kibo Commerce Demo: https://kibocommerce.vercel.store/
-- Commerce.js Demo: https://commercejs.vercel.store/
-- SalesForce Cloud Commerce Demo: https://salesforce-cloud-commerce.vercel.store/
+> **Prerequisites**: To use the starter you should have a Medusa server running locally on port 9000. Check out [medusa-starter-default](https://github.com/medusajs/medusa-starter-default) for a quick setup.
 
-## Run minimal version locally
+# Overview
 
-> To run a minimal version of Next.js Commerce you can start with the default local provider `@vercel/commerce-local` that has all features disabled (cart, auth) and uses static files for the backend
+The Medusa Next.js Starter is built with:
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Medusa](https://medusajs.com/)
 
-```bash
-pnpm install & pnpm build # run these commands in the root folder of the mono repo
-pnpm dev # run this command in the site folder
+Features include:
+- Full e-commerce support
+- Next.js 13
+- Customer Accounts
+- Search with Algolia
+- Checkout with PayPal and Stripe
+- App Router (coming soon)
+- [Product Module](https://docs.medusajs.com/modules/products/serverless-module) support (coming soon)
+
+# Quickstart
+
+## Deploy
+
+
+### Deploy with Vercel
+To get started, click the "Deploy with Vercel" button below.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmedusajs%2Fnextjs-starter-medusa&env=NEXT_PUBLIC_MEDUSA_BACKEND_URL&envDescription=The%20URL%20of%20your%20Medusa%20server&envLink=https%3A%2F%2Fdocs.medusajs.com%2Fdeployments%2Fserver%2F&demo-title=Medusa%20Next.js%20Starter&demo-description=A%20fully-fledged%20e-commerce%20store%20with%20Next.js%20and%20Medusa&demo-url=https%3A%2F%2Fnext.medusajs.com&demo-image=https%3A%2F%2Fmedusa-server-testing.s3.amazonaws.com%2FCleanShot%2B2023-06-22%2Bat%2B09.00.53%25402x-1687417264472.png&skippable-integrations=1)
+
+## Setting up the environment variables
+
+Navigate into your projects directory and get your environment variables ready:
+
+```shell
+cd nextjs-starter-medusa/
+mv .env.template .env.local
 ```
 
-> If you encounter any problems while installing and running for the first time, please see the Troubleshoot section
+### Install dependencies
 
-## Features
+Use Yarn to install all dependencies.
 
-- Performant by default
-- SEO Ready
-- Internationalization
-- Responsive
-- UI Components
-- Theming
-- Standardized Data Hooks
-- Integrations - Integrate seamlessly with the most common ecommerce platforms.
-- Dark Mode Support
-
-## Integrations
-
-Next.js Commerce integrates out-of-the-box with BigCommerce, Shopify, Swell, Saleor, Vendure, Spree and Commerce.js. We plan to support all major ecommerce backends.
-
-## Considerations
-
-- `packages/commerce` contains all types, helpers and functions to be used as a base to build a new **provider**.
-- **Providers** live under `packages`'s root folder and they will extend Next.js Commerce types and functionality (`packages/commerce`).
-- We have a **Features API** to ensure feature parity between the UI and the Provider. The UI should update accordingly and no extra code should be bundled. All extra configuration for features will live under `features` in `commerce.config.json` and if needed it can also be accessed programmatically.
-- Each **provider** should add its corresponding `next.config.js` and `commerce.config.json` adding specific data related to the provider. For example in the case of BigCommerce, the images CDN and additional API routes.
-
-## Configuration
-
-### How to change providers
-
-Open `site/.env.local` and change the value of `COMMERCE_PROVIDER` to the provider you would like to use, then set the environment variables for that provider (use `site/.env.template` as the base).
-
-The setup for Shopify would look like this for example:
-
-```
-COMMERCE_PROVIDER=@vercel/commerce-shopify
-NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN=xxxxxxx.myshopify.com
+```shell
+yarn
 ```
 
-### Features
+### Start developing
 
-Every provider defines the features that it supports under `packages/{provider}/src/commerce.config.json`
+You are now ready to start up your project.
 
-#### Features Available
+```shell
+yarn dev
+```
 
-The following features can be enabled or disabled. This means that the UI will remove all code related to the feature.
-For example: turning `cart` off will disable Cart capabilities.
+### Open the code and start customizing
 
-- cart
-- search
-- wishlist
-- customerAuth
-- customCheckout
+Your site is now running at http://localhost:8000!
 
-#### How to turn Features on and off
+Edit `/pages/index.tsx` to see your site update in real-time!
 
-> NOTE: The selected provider should support the feature that you are toggling. (This means that you can't turn wishlist on if the provider doesn't support this functionality out of the box)
+# Payment integrations
 
-- Open `site/commerce.config.json`
-- You'll see a config file like this:
-  ```json
-  {
-    "features": {
-      "wishlist": false,
-      "customCheckout": true
-    }
+By default this starter supports the following payment integrations
+
+- [Stripe](https://stripe.com/)
+- [Paypal](https://www.paypal.com/)
+
+To enable the integrations you need to add the following to your `.env.local` file:
+
+```shell
+NEXT_PUBLIC_STRIPE_KEY=<your-stripe-public-key>
+NEXT_PUBLIC_PAYPAL_CLIENT_ID=<your-paypal-client-id>
+```
+
+You will also need to setup the integrations in your Medusa server. See the [Medusa documentation](https://docs.medusajs.com) for more information on how to configure [Stripe](https://docs.medusajs.com/add-plugins/stripe) and [PayPal](https://docs.medusajs.com/add-plugins/paypal) in your Medusa project.
+
+# Search integration
+
+This starter is configured to support using the `medusa-search-meilisearch` plugin out of the box. To enable search you will need to enable the feature flag in `./store-config.json`, which you do by changing the config to this:
+
+```json
+{
+  "features": {
+    "search": true
   }
-  ```
-- Turn `wishlist` on by setting `wishlist` to `true`.
-- Run the app and the wishlist functionality should be back on.
-
-### How to create a new provider
-
-Follow our docs for [Adding a new Commerce Provider](packages/commerce/new-provider.md).
-
-If you succeeded building a provider, submit a PR with a valid demo and we'll review it asap.
-
-## Contribute
-
-Our commitment to Open Source can be found [here](https://vercel.com/oss).
-
-1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device.
-2. Create a new branch `git checkout -b MY_BRANCH_NAME`
-3. Install the dependencies: `pnpm install`
-4. Build the packages: `pnpm build`
-5. Duplicate `site/.env.template` and rename it to `site/.env.local`
-6. Add proper store values to `site/.env.local`
-7. Run `cd site` & `pnpm dev` to watch for code changes
-8. Run `pnpm turbo run build` to check the build after your changes
-
-## Work in progress
-
-We're using Github Projects to keep track of issues in progress and todo's. Here is our [Board](https://github.com/vercel/commerce/projects/1)
-
-People actively working on this project: @okbel, @lfades, @dominiksipowicz, @gbibeaul.
-
-## Troubleshoot
-
-<details>
-<summary>I already own a BigCommerce store. What should I do?</summary>
-<br>
-First thing you do is: <b>set your environment variables</b>
-<br>
-<br>
-.env.local
-
-```sh
-BIGCOMMERCE_STOREFRONT_API_URL=<>
-BIGCOMMERCE_STOREFRONT_API_TOKEN=<>
-BIGCOMMERCE_STORE_API_URL=<>
-BIGCOMMERCE_STORE_API_TOKEN=<>
-BIGCOMMERCE_STORE_API_CLIENT_ID=<>
-BIGCOMMERCE_CHANNEL_ID=<>
-```
-
-If your project was started with a "Deploy with Vercel" button, you can use Vercel's CLI to retrieve these credentials.
-
-1. Install Vercel CLI: `npm i -g vercel`
-2. Link local instance with Vercel and Github accounts (creates .vercel file): `vercel link`
-3. Download your environment variables: `vercel env pull .env.local`
-
-Next, you're free to customize the starter. More updates coming soon. Stay tuned..
-
-</details>
-
-<details>
-<summary>BigCommerce shows a Coming Soon page and requests a Preview Code</summary>
-<br>
-After Email confirmation, Checkout should be manually enabled through BigCommerce platform. Look for "Review & test your store" section through BigCommerce's dashboard.
-<br>
-<br>
-BigCommerce team has been notified and they plan to add more details about this subject.
-</details>
-
-<details>
-<summary>When run locally I get `Error: Cannot find module '...@vercel/commerce/dist/config'`</summary>
-
-```bash
-commerce/site
-❯ yarn dev
-yarn run v1.22.17
-$ next dev
-ready - started server on 0.0.0.0:3000, url: http://localhost:3000
-info  - Loaded env from /commerce/site/.env.local
-error - Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error
-Error: Cannot find module '/Users/dom/work/vercel/commerce/node_modules/@vercel/commerce/dist/config.cjs'
-    at createEsmNotFoundErr (node:internal/modules/cjs/loader:960:15)
-    at finalizeEsmResolution (node:internal/modules/cjs/loader:953:15)
-    at resolveExports (node:internal/modules/cjs/loader:482:14)
-    at Function.Module._findPath (node:internal/modules/cjs/loader:522:31)
-    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:919:27)
-    at Function.mod._resolveFilename (/Users/dom/work/vercel/commerce/node_modules/next/dist/build/webpack/require-hook.js:179:28)
-    at Function.Module._load (node:internal/modules/cjs/loader:778:27)
-    at Module.require (node:internal/modules/cjs/loader:1005:19)
-    at require (node:internal/modules/cjs/helpers:102:18)
-    at Object.<anonymous> (/Users/dom/work/vercel/commerce/site/commerce-config.js:9:14) {
-  code: 'MODULE_NOT_FOUND',
-  path: '/Users/dom/work/vercel/commerce/node_modules/@vercel/commerce/package.json'
 }
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
 
-The error usually occurs when running `pnpm dev` inside of the `/site/` folder after installing a fresh repository.
+Before you can search you will need to install the plugin in your Medusa server, for a written guide on how to do this – [see our documentation](https://docs.medusajs.com/add-plugins/meilisearch).
 
-In order to fix this, run `pnpm build` in the monorepo root folder first.
+The search components in this starter are developed with Algolia's `react-instant-search-hooks-web` library which should make it possible for you to seemlesly change your search provider to Algoli instead of MeiliSearch.
 
-> Using `pnpm dev` from the root is recommended for developing, which will run watch mode on all packages.
+To do this you will need to add `algoliasearch` to the project, by running
 
-</details>
+```shell
+yarn add algoliasearch
+```
+
+After this you will need to switch the current MeiliSearch `SearchClient` out with a Alogolia client. To do this update `@lib/search-client`.
+
+```ts
+import algoliasearch from "algoliasearch/lite"
+
+const appId = process.env.NEXT_PUBLIC_SEARCH_APP_ID || "test_app_id" // You should add this to your environment variables
+
+const apiKey = process.env.NEXT_PUBLIC_SEARCH_API_KEY || "test_key"
+
+export const searchClient = algoliasearch(appId, apiKey)
+
+export const SEARCH_INDEX_NAME =
+  process.env.NEXT_PUBLIC_INDEX_NAME || "products"
+```
+
+After this you will need to set up Algolia with your Medusa server, and then you should be good to go. For a more thorough walkthrough of using Algolia with Medusa – [see our documentation](https://docs.medusajs.com/add-plugins/algolia), and the [documentation for using `react-instantsearch-hooks-web`](https://www.algolia.com/doc/guides/building-search-ui/getting-started/react-hooks/).
+
+# Resources
+
+## Learn more about Medusa
+
+- [Website](https://www.medusajs.com/)
+- [GitHub](https://github.com/medusajs)
+- [Documentation](https://docs.medusajs.com/)
+
+## Learn more about Next.js
+
+- [Website](https://nextjs.org/)
+- [GitHub](https://github.com/vercel/next.js)
+- [Documentation](https://nextjs.org/docs)
